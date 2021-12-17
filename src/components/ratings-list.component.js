@@ -17,11 +17,11 @@ export default class RatingsList extends Component {
     }
 
     componentDidMount() {
-        this.retrieveRatings();
+        this.retrieveRatings(this.props.match.params.id);
     }
 
-    retrieveRatings() {
-        RatingDataService.getAll()
+    retrieveRatings(id) {
+        RatingDataService.getByEmployee(id)
             .then(response => {
                 this.setState({
                     ratings: response.data._embedded.ratings
@@ -73,7 +73,7 @@ export default class RatingsList extends Component {
 
                     <div>
                         <Link
-                            to={"/addRating"}
+                            to={"/employeeRatings/" + this.props.match.params.id + "/addRating"}
                             className="btn btn-outline-secondary"
                         >
                             Add Rating

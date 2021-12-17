@@ -11,6 +11,7 @@ import AddEmployee from "./components/add-employee.component";
 import AddQuery from "./components/add-query.component";
 import Rating from "./components/rating.component";
 import RatingsList from "./components/ratings-list.component";
+import AddRating from "./components/add-rating.component";
 
 // https://www.javaguides.net/2020/07/react-js-fetch-api-to-consume-spring.html
 // https://www.bezkoder.com/react-crud-web-api/
@@ -55,7 +56,8 @@ class App extends Component {
                         <Route path="/employee/:id" component={Employee} />
                         <Route path="/addQuery/:id" component={AddQuery} />
                         <Route path="/ratings/:id" component={Rating} />
-                        <Route path="/employeeRatings/:id" component={RatingsList} />
+                        <Route exact path="/employeeRatings/:id" component={RatingsList} />
+                        <Route path="/employeeRatings/:id/addRating/" component={AddRating} />
                         <Route path="/addEmployee" component={AddEmployee} />
                         <Route path="/queries/:id" component={Query} />
                     </Switch>
