@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import RatingDataService from "../services/rating.service";
 import { Link } from "react-router-dom";
+import {AiFillStar} from "react-icons/all";
 
 export default class RatingsList extends Component {
     constructor(props) {
@@ -53,6 +54,7 @@ export default class RatingsList extends Component {
         return (
             <div className="list row">
                 <div className="col-md-6">
+                    <AiFillStar />
                     <h4>Ratings List</h4>
 
                     <ul className="list-group">

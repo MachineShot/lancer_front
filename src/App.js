@@ -12,6 +12,7 @@ import AddQuery from "./components/add-query.component";
 import Rating from "./components/rating.component";
 import RatingsList from "./components/ratings-list.component";
 import AddRating from "./components/add-rating.component";
+import logo from './Capture.PNG';
 
 // https://www.javaguides.net/2020/07/react-js-fetch-api-to-consume-spring.html
 // https://www.bezkoder.com/react-crud-web-api/
@@ -22,9 +23,9 @@ class App extends Component {
             <div>
                 <nav className="navbar navbar-expand navbar-dark bg-dark">
                     <a href="/" className="navbar-brand">
-                        Lancer
+                        <img src={logo} alt="Logo" className="navbar-brand logo" />
                     </a>
-                    <div className="navbar-nav mr-auto">
+                        <div className="navbar-nav mr-auto">
                         <li className="nav-item">
                             <Link to={"/register"} className="nav-link">
                                 Register

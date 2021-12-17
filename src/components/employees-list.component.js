@@ -3,6 +3,7 @@ import EmployeeDataService from "../services/employee.service";
 import QueryDataService from "../services/query.service";
 import { Link } from "react-router-dom";
 import Modal from './modal.js';
+import {MdWork} from "react-icons/all";
 
 export default class EmployeesList extends Component {
     constructor(props) {
@@ -94,6 +95,7 @@ export default class EmployeesList extends Component {
         return (
             <div className="list row">
                 <div className="col-md-6">
+                    <MdWork />
                     <h4>Employees List</h4>
 
                     <ul className="list-group">
